@@ -1,0 +1,16 @@
+.solutions-container {
+    text-align: center;
+    padding: 15px;
+}
+
+.solutions {
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    text-align: center;
+}
+
+.solution {
+    width: 300px;
+    margin: 50px;
+}

@@ -12,6 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import InfosPerso from './InfosPerso';
 import InfosHabitation from './InfosHabitation';
 import InfosChauffage from './InfosChauffage';
+import emailjs from '@emailjs/browser';
 
 
 const steps = ['Situation personnelle', "Type d'habitation", 'Mode de vie'];
@@ -29,12 +30,25 @@ function getStepContent(step) {
   }
 }
 
+const sendEmail = () => {
+  let templateParams = JSON.parse(localStorage.getItem('user'))
+  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+}
+
 const theme = createTheme();
 
 export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
+    if(activeStep + 1 === steps.length) {
+      sendEmail()
+    }
     setActiveStep(activeStep + 1);
   };
 
@@ -46,7 +60,7 @@ export default function Checkout() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
-        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
+        <Paper elevation={3} sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
           <h1>Formulaire d'éligibilité aux aides et subventions 2022</h1>
           <p>Remplissez le formulaire ci dessous et Testez votre éligibilité aux aides de l'État pour votre projet</p>
           <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>

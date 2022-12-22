@@ -26,7 +26,7 @@ export default function Review() {
       <Typography variant="h6" gutterBottom>
         Mode de chauffage
       </Typography>
-      <FormControl>
+      <FormControl fullWidth>
         <FormLabel id="demo-controlled-radio-buttons-group">Votre mode de chauffage actuel ?</FormLabel>
         <RadioGroup
           aria-labelledby="demo-controlled-radio-buttons-group"
@@ -43,7 +43,7 @@ export default function Review() {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={user.solution?? ''}
-          label="Age"
+          label="Solution"
           name="solution"
           onChange={handleChangeSolution}
         >
