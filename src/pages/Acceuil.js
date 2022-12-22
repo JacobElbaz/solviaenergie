@@ -1,11 +1,10 @@
 import React from 'react'
-import EligiForn from '../components/EligiForm'
-import Checkout from '../components/Checkout'
+import EligiForm from '../components/EligiForm'
 
 function Acceuil() {
   return (
     <div>Acceuil
-      <Checkout/>
+      <EligiForm/>
     </div>
   )
 }

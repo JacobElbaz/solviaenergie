@@ -3,16 +3,24 @@ import Typography from '@mui/material/Typography';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
 
 export default function PaymentForm() {
-    const [logement, setLogement] = React.useState('maison')
-    const [status, setStatus] = React.useState('proprietaire')
+    const [user, setUser] = React.useState(JSON.parse(localStorage.getItem('user')))
+    const updateUser = (user) => {
+        localStorage.setItem('user', JSON.stringify(user))
+    }
 
     const handleChange = (e) => {
-        setLogement(e.target.value)
+        setUser({...user, [e.target.name]: e.target.value})
+        console.log(e)
     }
 
     const handleChangeStatus = (e) => {
-        setStatus(e.target.value)
+        setUser({...user, [e.target.name]: e.target.value})
+        console.log(e)
     }
+
+    React.useEffect(() => {
+        updateUser(user)
+    }, [handleChange, handleChangeStatus])
     return (
         <React.Fragment>
             <Typography variant="h6" gutterBottom>
@@ -21,23 +29,24 @@ export default function PaymentForm() {
             <FormControl>
                 <FormLabel id="demo-controlled-radio-buttons-group">Votre Statut</FormLabel>
                 <RadioGroup
+                    id="statut"
                     aria-labelledby="demo-controlled-radio-buttons-group"
-                    name="controlled-radio-buttons-group"
-                    value={status}
+                    name="statut"
+                    value={user.statut}
                     onChange={handleChangeStatus}
                 >
-                    <FormControlLabel value="proprietaire" control={<Radio />} label="Proprietaire" />
-                    <FormControlLabel value="locataire" control={<Radio />} label="Locataire" />
+                    <FormControlLabel id='statut' value="proprietaire" control={<Radio />} label="Proprietaire" />
+                    <FormControlLabel id='statut' value="locataire" control={<Radio />} label="Locataire" />
                 </RadioGroup>
                 <FormLabel id="demo-controlled-radio-buttons-group">Type de logement</FormLabel>
                 <RadioGroup
+                    id='logement'
                     aria-labelledby="demo-controlled-radio-buttons-group"
-                    name="controlled-radio-buttons-group"
-                    value={logement}
+                    name="logement"
+                    value={user.logement}
                     onChange={handleChange}
                 >
-                    <FormControlLabel value="maison" control={<Radio />} label="Maison" sx={{ flexGrow: 1, flexDirection: 'row-reverse', border: '1px solid', borderRadius: '8px' }}
-              />
+                    <FormControlLabel value="maison" control={<Radio />} label="Maison" />
                     <FormControlLabel value="appartement" control={<Radio />} label="Appartement" />
                 </RadioGroup>
             </FormControl>

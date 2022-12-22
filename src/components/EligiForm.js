@@ -1,47 +1,92 @@
-import { Button, TextField } from '@mui/material'
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import React from 'react'
-import dayjs from 'dayjs'
-import 'dayjs/locale/fr'
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import InfosPerso from './InfosPerso';
+import InfosHabitation from './InfosHabitation';
+import InfosChauffage from './InfosChauffage';
 
-function EligiForm() {
-  const [value, setValue] = React.useState(dayjs('2014-08-18T21:11:54'));
 
-  const handleChange = (newValue) => {
-    setValue(newValue);
-  };
+const steps = ['Situation personnelle', "Type d'habitation", 'Mode de vie'];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
+function getStepContent(step) {
+  switch (step) {
+    case 0:
+      return <InfosPerso />;
+    case 1:
+      return <InfosHabitation />;
+    case 2:
+      return <InfosChauffage />;
+    default:
+      throw new Error('Unknown step');
   }
-  return (
-    <div className='formulaire'>
-      <div className='form-header'>
-        <h1>Formulaire d'éligibilité aux aides et subventions</h1>
-        <p>Remplissez le formulaire ci dessous et Testez votre éligibilité aux aides de l'État pour votre projet</p>
-      </div>
-      <form onSubmit={handleSubmit}>
-        <TextField label='Nom' variant='outlined' required/>
-        <TextField label='Prénom' variant='outlined' />
-        <TextField type='email' label='E-mail' variant='outlined' required/>
-        <TextField type='tel' label='Téléphone' variant='outlined' required/>
-        <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={'fr'}>
-          <DesktopDatePicker
-            label="Date de naissance"
-            inputFormat="DD/MM/YYYY"
-            value={value}
-            onChange={handleChange}
-            renderInput={(params) => <TextField {...params} />}
-          />
-        </LocalizationProvider>
-        <TextField label='Adresse' variant='outlined' />
-        <Button type='submit'>Suivant</Button>
-      </form>
-    </div>
-  )
 }
 
-export default EligiForm
+const theme = createTheme();
+
+export default function Checkout() {
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleNext = () => {
+    setActiveStep(activeStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep(activeStep - 1);
+  };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
+        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
+          <h1>Formulaire d'éligibilité aux aides et subventions 2022</h1>
+          <p>Remplissez le formulaire ci dessous et Testez votre éligibilité aux aides de l'État pour votre projet</p>
+          <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
+            {steps.map((label) => (
+              <Step key={label}>
+                <StepLabel>{label}</StepLabel>
+              </Step>
+            ))}
+          </Stepper>
+          {activeStep === steps.length ? (
+            <React.Fragment>
+              <Typography variant="h5" gutterBottom>
+                Merci pour votre envoie !
+              </Typography>
+              <Typography variant="subtitle1">
+                Un conseiller spécialisé vous contactera très prochainement.
+              </Typography>
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              {getStepContent(activeStep)}
+              <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                {activeStep !== 0 && (
+                  <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
+                    Retour
+                  </Button>
+                )}
+
+                <Button
+                  variant="contained"
+                  onClick={handleNext}
+                  sx={{ mt: 3, ml: 1 }}
+                >
+                  {activeStep === steps.length - 1 ? 'Envoyer' : 'Suivant'}
+                </Button>
+              </Box>
+            </React.Fragment>
+          )}
+        </Paper>
+      </Container>
+    </ThemeProvider>
+  );
+}

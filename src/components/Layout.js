@@ -43,7 +43,7 @@ function Layout() {
                     Calorifugeage
                     </NavDropdown.Item>
                     <NavDropdown.Item href="/isolation-exterieur">
-                    Isolation Thermique Extèrieur
+                    Isolation Thermique Extérieure
                     </NavDropdown.Item>
                   </NavDropdown>
                   <Nav.Link href="/nos-realisations">Nos réalisations</Nav.Link>

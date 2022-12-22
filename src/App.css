@@ -1,0 +1,11 @@
+.radio-sel {
+    flex-grow: 1; 
+    flex-direction: row-reverse;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.radio-sel:checked {
+    border-color: blue;
+    border: 5px solid;
+}
