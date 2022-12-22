@@ -1,8 +1,12 @@
 import React from 'react'
+import EligiForn from '../components/EligiForm'
+import Checkout from '../components/Checkout'
 
 function Acceuil() {
   return (
-    <div>Acceuil</div>
+    <div>Acceuil
+      <Checkout/>
+    </div>
   )
 }
 
