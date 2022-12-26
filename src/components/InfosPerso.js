@@ -30,9 +30,6 @@ export default function AddressForm() {
     updateUser(user)
   }, [handleChange, handleChangeDate])
 
-  
-
-
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>

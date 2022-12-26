@@ -1,8 +1,14 @@
 .partenaires {
     text-align: center;
+    margin: 50px;
 }
 
 .partenaires img{
     height: 100px;
     margin: 15px;
+    transition: all .2s ease-in-out;
+}
+
+.partenaires img:hover {
+    transform: scale(1.2);
 }

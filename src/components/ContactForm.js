@@ -5,13 +5,30 @@ import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { FormControl, InputLabel, MenuItem, Select, TextareaAutosize } from '@mui/material';
+import { createTheme, FormControl, InputLabel, MenuItem, Select, ThemeProvider } from '@mui/material';
+import { deepOrange } from '@mui/material/colors';
 
-
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: deepOrange[50]
+    }
+  }
+})
 
 export default function ContactForm() {
+
+  const [user, setUser] = React.useState({ firstName: null, lastName: null, email: null, tel: null, solution: null, message: null })
+
+  const updateUser = (user) => {
+    localStorage.setItem('user', JSON.stringify(user))
+  }
+
+  const handleChange = (e) => {
+    e.preventDefault()
+    setUser({ ...user, [e.target.id]: e.target.value })
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -28,17 +45,16 @@ export default function ContactForm() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
           }}
         >
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -47,8 +63,7 @@ export default function ContactForm() {
                   required
                   fullWidth
                   id="firstName"
-                  label="First Name"
-                  autoFocus
+                  label="Prenom"
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -56,7 +71,7 @@ export default function ContactForm() {
                   required
                   fullWidth
                   id="lastName"
-                  label="Last Name"
+                  label="Nom"
                   name="lastName"
                   autoComplete="family-name"
                 />
@@ -66,7 +81,7 @@ export default function ContactForm() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="E-mail"
                   name="email"
                   autoComplete="email"
                 />
@@ -84,21 +99,21 @@ export default function ContactForm() {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Solution</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={solution}
-                  label="Solution"
-                  onChange={handleChangeSolution}
-                >
-                  <MenuItem value={"calorifugeage"}>Calorifugeage</MenuItem>
-                  <MenuItem value={"pac"}>Pompe à chaleur</MenuItem>
-                  <MenuItem value={"iso exterieure"}>Isolation extérieure</MenuItem>
-                </Select></FormControl>
+                  <InputLabel id="demo-simple-select-label">Solution</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={solution}
+                    label="Solution"
+                    onChange={handleChangeSolution}
+                  >
+                    <MenuItem value={"calorifugeage"}>Calorifugeage</MenuItem>
+                    <MenuItem value={"pac"}>Pompe à chaleur</MenuItem>
+                    <MenuItem value={"iso exterieure"}>Isolation extérieure</MenuItem>
+                  </Select></FormControl>
               </Grid>
               <Grid item xs={12}>
-              <TextField
+                <TextField
                   fullWidth
                   multiline
                   label='Message'

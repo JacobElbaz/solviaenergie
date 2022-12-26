@@ -1,7 +1,5 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -13,9 +11,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function Layout() {
   return (
     <div>
-      <Navbar key={'lg'} bg="light" expand={'lg'} className="mb-3">
+      <Navbar key={'lg'} expand={'lg'} className="mb-3 mt-5">
           <Container fluid>
-            <Navbar.Brand href="/">SOLVIA</Navbar.Brand>
+            <Navbar.Brand href="/"></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'lg'}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${'lg'}`}

@@ -12,25 +12,42 @@ import PACAirAir from './pages/PACAirAir'
 import PACAirEau from './pages/PACAirEau'
 import Realisations from './pages/Realisations'
 import Recrutement from './pages/Recrutement'
+import { createTheme, Paper, ThemeProvider } from '@mui/material';
+import { deepOrange, orange } from '@mui/material/colors';
+import logo from './assets/logo.webp'
+
+const theme = createTheme({
+  palette: {
+    primary: deepOrange,
+    secondary: orange
+  }
+})
 
 function App() {
   return (
-    <div className="App">
-      <Layout />
-      <Routes>
-        <Route path='/' element={<Acceuil/>} />
-        <Route path='/qui-sommes-nous' element={<About/>} />
-        <Route path='/aides' element={<Aides/>} />
-        <Route path='/calorifugeage' element={<Calorifugeage/>} />
-        <Route path='/politiques-de-confidentialite' element={<Confidentialite/>} />
-        <Route path='/isolation-exterieur' element={<IsoExterieur/>} />
-        <Route path='/pac-air-air' element={<PACAirAir/>} />
-        <Route path='/pac-air-eau' element={<PACAirEau/>} />
-        <Route path='/nos-realisations' element={<Realisations/>} />
-        <Route path='/recrutement' element={<Recrutement/>} />
-      </Routes>
-      <Footer />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <div className='logo'>
+        <Paper elevation={0}>
+          <img src={logo} alt="" />
+        </Paper>
+        </div>
+        <Layout />
+        <Routes>
+          <Route path='/' element={<Acceuil />} />
+          <Route path='/qui-sommes-nous' element={<About />} />
+          <Route path='/aides' element={<Aides />} />
+          <Route path='/calorifugeage' element={<Calorifugeage />} />
+          <Route path='/politiques-de-confidentialite' element={<Confidentialite />} />
+          <Route path='/isolation-exterieur' element={<IsoExterieur />} />
+          <Route path='/pac-air-air' element={<PACAirAir />} />
+          <Route path='/pac-air-eau' element={<PACAirEau />} />
+          <Route path='/nos-realisations' element={<Realisations />} />
+          <Route path='/recrutement' element={<Recrutement />} />
+        </Routes>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

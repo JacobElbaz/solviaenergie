@@ -9,3 +9,49 @@
     border-color: blue;
     border: 5px solid;
 }
+
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+}
+
+.navbar {
+    background-color: white;
+}
+
+.navbar a:hover {
+    color: #ff5722;
+}
+
+.navbar .dropdown-menu {
+    border: white;
+    box-shadow: 1px 1px 2px red;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.head {
+    background-image: url('./assets/layered-waves-haikei.svg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    min-height: 90vh;
+}
+
+video {
+    width: 100%;
+}
+
+@media  only screen and (min-width: 768px) { 
+    video {
+        width: 900px;
+    }
+}
+
+.noValid {
+    background-color:rgba(255, 0, 0, 0.2) !important;
+    color: red;
+}
