@@ -9,7 +9,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 export default function AddressForm() {
   const [value, setValue] = React.useState(dayjs('2014-08-18T21:11:54'));
-  const [user, setUser] = React.useState({firstName: null, lastName: null, email: null, address: null, tel: null, date: null})
+  const [user, setUser] = React.useState({firstName: null, lastName: null, email: null, address: null, tel: null, date: null, statut: 'proprietaire', logement: 'maison', chauffage: 'fioul', solution: 'pac air air'})
 
   const updateUser = (user) => {
     localStorage.setItem('user', JSON.stringify(user))
@@ -102,6 +102,7 @@ export default function AddressForm() {
             label="Date de naissance"
             inputFormat="DD/MM/YYYY"
             value={value}
+            name='date'
             onChange={handleChangeDate}
             renderInput={(params) => <TextField {...params} />}
           />

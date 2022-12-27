@@ -30,7 +30,7 @@ function getStepContent(step) {
 
 const sendEmail = () => {
   let templateParams = JSON.parse(localStorage.getItem('user'))
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+  emailjs.send('service_0b8ior8', 'template_xharss9', templateParams, 'mEYfRDD7YhHd42iLG')
     .then(function (response) {
       console.log('SUCCESS!', response.status, response.text);
     }, function (error) {
@@ -43,18 +43,26 @@ export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
-    const required_fields = ['lastName', 'email', 'tel']
+    let required_fields = ['lastName', 'email', 'tel']
+    let validInputs = true
     if (activeStep == 0) {
       for (let field of required_fields) {
         let inp = document.getElementById(field)
-        if (inp.checkValidity() != true) {
+        if (inp.checkValidity() == false) {
           inp.classList.add('noValid')
+          validInputs = false
         }
         else {
           inp.classList.remove('noValid')
         }
       }
     }
+    console.log(validInputs)
+    console.log(activeStep)
+    if(validInputs){
+      setActiveStep(activeStep + 1)
+    }
+
     if (activeStep + 1 === steps.length) {
       sendEmail()
     }

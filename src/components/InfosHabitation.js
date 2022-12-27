@@ -32,7 +32,7 @@ export default function PaymentForm() {
                     id="statut"
                     aria-labelledby="demo-controlled-radio-buttons-group"
                     name="statut"
-                    value={user.statut}
+                    defaultValue='proprietaire'
                     onChange={handleChangeStatus}
                 >
                     <FormControlLabel id='statut' value="proprietaire" control={<Radio />} label="Proprietaire" />
@@ -43,7 +43,7 @@ export default function PaymentForm() {
                     id='logement'
                     aria-labelledby="demo-controlled-radio-buttons-group"
                     name="logement"
-                    value={user.logement}
+                    defaultValue='maison'
                     onChange={handleChange}
                 >
                     <FormControlLabel value="maison" control={<Radio />} label="Maison" />

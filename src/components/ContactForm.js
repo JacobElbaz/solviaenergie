@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { createTheme, FormControl, InputLabel, MenuItem, Select, ThemeProvider } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
+import emailjs from '@emailjs/browser';
 
 const theme = createTheme({
   palette: {
@@ -18,24 +19,29 @@ const theme = createTheme({
 
 export default function ContactForm() {
 
-  const [user, setUser] = React.useState({ firstName: null, lastName: null, email: null, tel: null, solution: null, message: null })
-
-  const updateUser = (user) => {
-    localStorage.setItem('user', JSON.stringify(user))
-  }
-
-  const handleChange = (e) => {
-    e.preventDefault()
-    setUser({ ...user, [e.target.id]: e.target.value })
-  }
+  const form = React.useRef()
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
+      firstName: data.get('firstName'),
+      lastName: data.get('lastName'),
       email: data.get('email'),
-      password: data.get('password'),
+      tel: data.get('tel'),
+      solution: data.get('solution'),
+      message: data.get('message')
     });
+
+    console.log(form.current)
+    console.log(data)
+
+    emailjs.sendForm('service_0b8ior8', 'template_xharss9', form.current, 'mEYfRDD7YhHd42iLG')
+            .then((result) => {
+                alert("Message Sent , I will get back to you shortly", result.text);
+            }, (error) => {
+                alert("An error occurred, Please try again", error.text);
+            });
   };
 
   const [solution, setSolution] = React.useState('')
@@ -54,7 +60,7 @@ export default function ContactForm() {
             alignItems: 'center',
           }}
         >
-          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" ref={form} onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -105,6 +111,7 @@ export default function ContactForm() {
                     id="demo-simple-select"
                     value={solution}
                     label="Solution"
+                    name='solution'
                     onChange={handleChangeSolution}
                   >
                     <MenuItem value={"calorifugeage"}>Calorifugeage</MenuItem>
@@ -117,6 +124,7 @@ export default function ContactForm() {
                   fullWidth
                   multiline
                   label='Message'
+                  name='message'
                   rows={3}
                 />
               </Grid>
