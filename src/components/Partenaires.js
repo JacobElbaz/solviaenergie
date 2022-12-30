@@ -5,13 +5,13 @@ import qualibat from '../assets/qualibat.avif'
 import garantie from '../assets/garantie.png'
 import smabtp from '../assets/smabtp.png'
 import './Partenaires.css'
-import { Paper } from '@mui/material'
+import { Paper, Typography } from '@mui/material'
 
 function Partenaires() {
   return (
     <div className='partenaires'>
-      <h1>Ils nous font confiance</h1>
-      <Paper elevation={5}>
+      <Typography variant='h2' fontWeight='bold'>Ils nous font confiance</Typography>
+      <Paper elevation={3} className='paper'>
         <a href="https://www.domofinance.com/" target='_blank' rel="noopener noreferrer"><img src={domofinance} alt="" /></a>
         <a href="https://www.qualibat.com/nos-missions/le-rge/" target="_blank" rel="noopener noreferrer"><img src={qualibat} alt="" /></a>
         <a href="https://www.eco-artisan.net/" target="_blank" rel="noopener noreferrer"><img src={rge} alt="" /></a>

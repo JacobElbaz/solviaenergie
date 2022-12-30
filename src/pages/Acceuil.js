@@ -4,14 +4,14 @@ import EligiForm from '../components/EligiForm'
 import Feedback from '../components/Feedback'
 import Partenaires from '../components/Partenaires'
 import Solutions from '../components/Solutions'
-import sample from '../assets/sample-video.mp4'
+import solvia from '../assets/videos/entreprise.mp4'
 
 function Acceuil() {
   return (
     <div>
       <Grid container justifyContent='space-around' alignItems='center' className='head'>
         <Grid item>
-          <video src={sample} controls loop autoPlay></video>
+          <video src={solvia} controls loop autoPlay muted></video>
         </Grid>
         <Grid item>
           <EligiForm />

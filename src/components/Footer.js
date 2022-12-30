@@ -2,7 +2,7 @@ import React from 'react'
 import ContactForm from './ContactForm'
 import ContactInfos from './ContactInfos'
 import './Footer.css'
-import { createTheme, FormControl, InputLabel, MenuItem, Select, ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider, Typography } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 
 const theme = createTheme({
@@ -10,14 +10,24 @@ const theme = createTheme({
     primary: {
       main: deepOrange[50]
     }
-  }
+  },
+  typography: {
+    fontFamily: [
+      'Questrial',
+       '-apple-system',
+        'BlinkMacSystemFont',
+         'Segoe UI',
+          'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'sans-serif',].join(','),
+    }
 })
 
 function Footer() {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <div className="custom-shape-divider-bottom-1671971675">
+        <div className="custom-shape-divider-bottom-1671971675" id='contact'>
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
             <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" className="shape-fill"></path>
@@ -25,7 +35,7 @@ function Footer() {
           </svg>
         </div>
         <div className='footer-container'>
-          <h1>Vous avez des questions ?</h1>
+          <Typography variant='h1' fontSize={50} fontWeight='bold' >Vous avez des questions ?</Typography>
           <div className='footer'>
             <ContactInfos />
             <ContactForm />

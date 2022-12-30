@@ -20,8 +20,19 @@ const theme = createTheme({
   palette: {
     primary: deepOrange,
     secondary: orange
+  },
+  typography: {
+    fontFamily: [
+      'Questrial',
+       '-apple-system',
+        'BlinkMacSystemFont',
+         'Segoe UI',
+          'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'sans-serif',].join(','),
+    }
   }
-})
+)
 
 function App() {
   return (

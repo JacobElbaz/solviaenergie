@@ -3,7 +3,7 @@
     margin: 50px;
 }
 
-.partenaires img{
+.partenaires img {
     height: 100px;
     margin: 15px;
     transition: all .2s ease-in-out;
@@ -11,4 +11,15 @@
 
 .partenaires img:hover {
     transform: scale(1.2);
+}
+
+.paper {
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #ffffff !important;
+    background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
+    margin-top: 50px;
 }

@@ -14,7 +14,17 @@ const theme = createTheme({
     primary: {
       main: deepOrange[50]
     }
-  }
+  },
+  typography: {
+    fontFamily: [
+      'Questrial',
+       '-apple-system',
+        'BlinkMacSystemFont',
+         'Segoe UI',
+          'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'sans-serif',].join(','),
+    }
 })
 
 export default function ContactForm() {
