@@ -117,3 +117,11 @@ video {
         width: 100%;
     }
 }
+
+h5 {
+    margin-top: 25px !important;
+}
+
+.page-img {
+    max-width: 90vw;
+}

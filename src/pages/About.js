@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Container, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Button, Container, Typography } from '@mui/material'
 import { ExpandMore } from '@mui/icons-material'
 import logo from '../assets/logo-about.webp'
 import React from 'react'
@@ -10,6 +10,10 @@ function About() {
       <Container sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
         <Typography fontSize='20px' sx={{ maxWidth: '500px', textAlign: 'center' }}>Notre mission à <strong style={{ color: '#ff5722' }}>Solvia Energie</strong> est simple:<br /> Fournir des services de grande qualité à nos clients. Notre équipe fait tout pour répondre aux besoins spécifiques de chaque projet. Grâce à une communication transparente et à une qualité de service exceptionnelle, nous espérons que vous trouverez ce que vous cherchez en faisant appel à notre Service de rénovation de maison. Pour plus d'informations ou pour des demandes générales, contactez-nous dès aujourd'hui.</Typography>
         <img src={logo} alt="" style={{ maxWidth: '100%' }} />
+      </Container>
+      <Container sx={{textAlign: 'center', marginBottom: '50px'}}>
+        <Button variant='contained' href='/nos-realisations'>Nos Réalisations</Button>
+        <Button href='/politiques'>Politique de confidentialité</Button>
       </Container>
       <Typography variant='h4' fontWeight='bold' sx={{ marginBottom: '50px' }}>QUESTIONS FREQUENTES</Typography>
       <Accordion>

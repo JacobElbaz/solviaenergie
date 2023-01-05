@@ -24,14 +24,14 @@ const theme = createTheme({
   typography: {
     fontFamily: [
       'Questrial',
-       '-apple-system',
-        'BlinkMacSystemFont',
-         'Segoe UI',
-          'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    'sans-serif',].join(','),
-    }
+      '-apple-system',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      'sans-serif',].join(','),
   }
+}
 )
 
 function App() {
@@ -39,9 +39,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <div className='logo'>
-        <Paper elevation={0}>
-          <img src={logo} alt="" />
-        </Paper>
+          <a href="/">
+            <Paper elevation={0}>
+              <img src={logo} alt="" />
+            </Paper>
+          </a>
         </div>
         <Layout />
         <Routes>
@@ -55,6 +57,7 @@ function App() {
           <Route path='/pac-air-eau' element={<PACAirEau />} />
           <Route path='/nos-realisations' element={<Realisations />} />
           <Route path='/recrutement' element={<Recrutement />} />
+          <Route path='/politiques' element={<Confidentialite />} />
         </Routes>
         <Footer />
       </div>

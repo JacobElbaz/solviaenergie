@@ -13,6 +13,11 @@
     justify-content: center;
     text-align: center;
 }
+
+.solutions a {
+    text-decoration: none;
+}
+
 .solution {
     display: flex;
     flex-wrap: wrap;
