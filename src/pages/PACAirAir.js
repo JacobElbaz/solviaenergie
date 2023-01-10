@@ -1,12 +1,17 @@
 import React from 'react'
 import { Button, Container, Typography } from '@mui/material'
 import image from '../assets/maison.webp'
+import { Helmet } from 'react-helmet-async'
 
 function PACAirAir() {
   return (
     <Container>
+      <Helmet>
+        <title>Solvia | Pompe à chaleur air-air</title>
+        <meta name="description" content="La pompe à chaleur air-air utilise les calories de l'air, une énergie gratuite, pour chauffer efficacement et à moindre coût votre logement." />
+      </Helmet>
       <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Pompe à chaleur Air/Air</Typography>
-      <img src={image} alt="" className='page-img'/>
+      <img src={image} alt="pompe à chaleur" className='page-img'/>
       <Typography variant='h4' component='h5' color='primary'>Tout savoir sur la pompe à chaleur Air-Air</Typography>
       <Typography fontStyle='italic'>La pompe à chaleur air-air utilise les calories de l'air, une énergie gratuite, pour chauffer efficacement et à moindre coût votre logement. Elle permet, en effet, de diviser par 3 votre facture de chauffage. Ces économies font de la pompe à chaleur air-air un système rentable en seulement quelques années.</Typography>
       <Typography variant='h5' color='primary'>Comment fonctionne une PAC air-air ?</Typography>

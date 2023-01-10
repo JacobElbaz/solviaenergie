@@ -9,11 +9,16 @@ import coup from '../assets/coup de pouce.webp'
 import cee from '../assets/cee.webp'
 import tva from '../assets/tva.webp'
 import exo from '../assets/exoneration.webp'
+import { Helmet } from 'react-helmet-async'
 
 function Aides() {
   return (
     <Container>
-      <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' marginTop='70px'>Aides et subventions 2022</Typography>
+      <Helmet>
+        <title>Solvia | Aides et subventions</title>
+        <meta name="description" content="Rénovation énergétique : les aides auxquelles vous pouvez prétendre." />
+      </Helmet>
+      <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' marginTop='70px'>Aides et subventions 2023</Typography>
       <Typography variant='h4' color='secondary' textAlign='center' marginY='50px'>Rénovation énergétique : les aides auxquelles vous pouvez prétendre</Typography>
       <Aide title="MaPrimeRenov'" img={maprimerenov} text={<Typography>Lancée le 1er janvier 2020, MaPrimeRénov' remplace le crédit d'impôt pour la transition énergétique (CITE) et les aides de l'Agence nationale de l'Habitat (Anah) « Habiter mieux agilité ». Dans le cadre du Plan de relance de l'économie, le dispositif a été renforcé depuis le 1er octobre 2020.<br /> MaPrimeRénov' est désormais accessible à tous les propriétaires et à toutes les copropriétés.</Typography>} />
       <Aide title="Aide « Habiter mieux sérénité » de l'Agence nationale de l'habitat (Anah)" img={agence} text={<Typography>« Habiter mieux sérénité » est une aide versée par l'Anah à certains ménages pour les aider dans les travaux de rénovation de leurs logements. Le financement est proportionnel au montant des travaux. Le montant total de l'aide ne pas excéder 18 000 €.<br />L'aide est accordée aux ménages aux ressources modestes et très modestes, propriétaires occupant un logement individuel. Les propriétaires bailleurs et syndicats de copropriétaires sont également éligibles.<br />Pour les logements occupés à titre de résidence principale et qui ont plus de 15 ans à la date où le dossier est déposé.</Typography>} />

@@ -12,7 +12,7 @@ function Solutions() {
       <div className='solutions'>
         <Card className='solution'>
           <div style={{ height: '150px', width: 'inherit', overflow: 'hidden' }}>
-            <img src={pac} />
+            <img src={pac} alt='pompe à chaleur'/>
           </div>
           <CardContent className='card-content'>
             <Typography variant='h4'><a href="/pac-air-eau">Pompe à chaleur</a></Typography>
@@ -22,7 +22,7 @@ function Solutions() {
         </Card>
         <Card className='solution'>
           <div style={{ height: '150px', width: 'inherit', overflow: 'hidden' }}>
-            <img src={calo} />
+            <img src={calo} alt='calorifugeage'/>
           </div>
           <CardContent className='card-content'>
             <Typography variant='h4'><a href="/calorifugeage">Calorifugeage</a></Typography>
@@ -32,7 +32,7 @@ function Solutions() {
         </Card>
         <Card className='solution'>
           <div style={{ height: '150px', width: 'inherit', overflow: 'hidden' }}>
-            <img src={iso} />
+            <img src={iso} alt='isolation extérieure'/>
           </div>
           <CardContent className='card-content'>
             <Typography variant='h4'><a href="/isolation-exterieur">Isolation exterieure</a></Typography>

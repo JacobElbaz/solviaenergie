@@ -1,10 +1,15 @@
 import { Button, Container, Typography } from '@mui/material'
 import React from 'react'
 import video from '../assets/videos/calorifugeage.mp4'
+import { Helmet } from 'react-helmet-async'
 
 function Calorifugeage() {
   return (
     <Container>
+      <Helmet>
+        <title>Solvia | Calorifugeage</title>
+        <meta name="description" content="Le calorifugeage thermique désigne l'isolation des tuyaux ainsi que des canalisations d'eau et de chauffage." />
+      </Helmet>
       <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Calorifugeage</Typography>
       <div style={{textAlign: 'center'}}><video src={video} controls loop autoPlay muted></video></div>
       <Typography variant='h4' component='h5' color='primary'>Qu'est-ce que le calorifugeage ?</Typography>

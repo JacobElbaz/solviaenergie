@@ -76,7 +76,7 @@ export default function Checkout() {
   return (
     <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
       <Paper elevation={3} sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
-        <Typography variant='h4' id='form'>Formulaire d'éligibilité aux aides et subventions 2022</Typography>
+        <Typography variant='h4' id='form'>Formulaire d'éligibilité aux aides et subventions 2023</Typography>
         <Typography variant='subtitle1'>Remplissez le formulaire ci dessous et testez votre éligibilité aux aides de l'État pour votre projet</Typography>
         <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
           {steps.map((label) => (

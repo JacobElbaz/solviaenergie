@@ -2,6 +2,7 @@ import { Box, Button, Container, FormControl, Grid, InputLabel, MenuItem, Select
 import emailjs from '@emailjs/browser';
 import React from 'react'
 import UploadFileIcon from '@mui/icons-material/UploadFile';
+import { Helmet } from 'react-helmet-async';
 
 function Recrutement() {
   const form = React.useRef()
@@ -37,6 +38,10 @@ function Recrutement() {
 
   return (
     <Container maxWidth="xs">
+      <Helmet>
+        <title>Solvia | Recrutement</title>
+        <meta name="description" content="Vous pouvez envoyez votre CV afin de postuler à l'un des postes vacants au sein de notre entreprise." />
+      </Helmet>
       <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Nous recrutons</Typography>
       <Box
         sx={{

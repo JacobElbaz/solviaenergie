@@ -6,7 +6,7 @@ function Aide({title, img, text}) {
     <div className='aide'>
         <Typography variant='h5' color='primary'>{title}</Typography>
         <div style={{display: 'flex', flexWrap: 'wrap', alignContent: 'space-around'}}>
-            <img src={img} alt="" />
+            <img src={img} alt="image aide" />
             <div style={{maxWidth: '500px', margin: 'auto'}} >{text}</div>
         </div>
     </div>

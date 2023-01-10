@@ -15,11 +15,16 @@ import img11 from '../assets/carousel 2/11.jpg'
 import img12 from '../assets/carousel 2/12.jpg'
 import img13 from '../assets/carousel 2/13.jpg'
 import { FormatQuote } from '@mui/icons-material'
+import { Helmet } from 'react-helmet-async'
 
 
 function Realisations() {
   return (
     <Container className='realisations'>
+      <Helmet>
+        <title>Solvia | Nos Réalisations</title>
+        <meta name="description" content="97% de nos clients sont satisfaits de nos services." />
+      </Helmet>
       <div className='my-5'>
         <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Nos Réalisations</Typography>
         <Typography variant='h4' textAlign='center'><strong style={{ color: '#ff5722' }}>97%</strong> de nos clients sont satisfaits de nos services.</Typography>
@@ -27,45 +32,45 @@ function Realisations() {
       <div className='carousel-container'>
         <Carousel className='carousel'>
           <CarouselItem>
-            <img src={img1} alt="" />
+            <img src={img1} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img2} alt="" />
+            <img src={img2} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img3} alt="" />
+            <img src={img3} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img4} alt="" />
+            <img src={img4} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img5} alt="" />
+            <img src={img5} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img6} alt="" />
+            <img src={img6} alt="photo travaux" />
           </CarouselItem>
         </Carousel>
         <Carousel className='carousel'>
           <CarouselItem>
-            <img src={img7} alt="" />
+            <img src={img7} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img8} alt="" />
+            <img src={img8} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img9} alt="" />
+            <img src={img9} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img10} alt="" />
+            <img src={img10} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img11} alt="" />
+            <img src={img11} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img12} alt="" />
+            <img src={img12} alt="photo travaux" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img13} alt="" />
+            <img src={img13} alt="photo travaux" />
           </CarouselItem>
         </Carousel>
       </div>

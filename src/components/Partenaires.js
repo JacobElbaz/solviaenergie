@@ -12,11 +12,11 @@ function Partenaires() {
     <div className='partenaires'>
       <Typography variant='h2' fontWeight='bold'>Ils nous font confiance</Typography>
       <Paper elevation={3} className='paper'>
-        <a href="https://www.domofinance.com/" target='_blank' rel="noopener noreferrer"><img src={domofinance} alt="" /></a>
-        <a href="https://www.qualibat.com/nos-missions/le-rge/" target="_blank" rel="noopener noreferrer"><img src={qualibat} alt="" /></a>
-        <a href="https://www.eco-artisan.net/" target="_blank" rel="noopener noreferrer"><img src={rge} alt="" /></a>
-        <a href="https://www.service-public.fr/particuliers/vosdroits/F2034" target="_blank" rel="noopener noreferrer"><img src={garantie} alt="" /></a>
-        <a href="https://www.groupe-sma.fr/" target="_blank" rel="noopener noreferrer"><img src={smabtp} alt="" /></a>
+        <a href="https://www.domofinance.com/" target='_blank' rel="noopener noreferrer"><img src={domofinance} alt="domofinance" /></a>
+        <a href="https://www.qualibat.com/nos-missions/le-rge/" target="_blank" rel="noopener noreferrer"><img src={qualibat} alt="qualibat rge" /></a>
+        <a href="https://www.eco-artisan.net/" target="_blank" rel="noopener noreferrer"><img src={rge} alt="eco-artisan rge" /></a>
+        <a href="https://www.service-public.fr/particuliers/vosdroits/F2034" target="_blank" rel="noopener noreferrer"><img src={garantie} alt="service public" /></a>
+        <a href="https://www.groupe-sma.fr/" target="_blank" rel="noopener noreferrer"><img src={smabtp} alt="groupe sma" /></a>
       </Paper>
     </div>
   )
