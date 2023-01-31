@@ -30,7 +30,7 @@ function getStepContent(step) {
 
 const sendEmail = () => {
   let templateParams = JSON.parse(localStorage.getItem('user'))
-  emailjs.send('service_0b8ior8', 'template_xharss9', templateParams, 'mEYfRDD7YhHd42iLG')
+  emailjs.send('service_w6tdw56', 'template_qpfcuxu', templateParams, 'DgrbULK3abKqPvWGP')
     .then(function (response) {
       console.log('SUCCESS!', response.status, response.text);
     }, function (error) {

@@ -46,7 +46,7 @@ export default function ContactForm() {
     console.log(form.current)
     console.log(data)
 
-    emailjs.sendForm('service_0b8ior8', 'template_xharss9', form.current, 'mEYfRDD7YhHd42iLG')
+    emailjs.sendForm('service_w6tdw56', 'template_qpfcuxu', form.current, 'DgrbULK3abKqPvWGP')
             .then((result) => {
                 alert("Message Sent , I will get back to you shortly", result.text);
             }, (error) => {

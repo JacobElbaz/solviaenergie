@@ -23,7 +23,7 @@ function Recrutement() {
     console.log(form.current)
     console.log(data)
 
-    emailjs.sendForm('service_0b8ior8', 'template_xharss9', form.current, 'mEYfRDD7YhHd42iLG')
+    emailjs.sendForm('service_w6tdw56', 'template_nonwv29', form.current, 'DgrbULK3abKqPvWGP')
       .then((result) => {
         alert("Votre demande a bien été envoyée.", result.text);
       }, (error) => {
