@@ -48,9 +48,9 @@ export default function ContactForm() {
 
     emailjs.sendForm('service_w6tdw56', 'template_qpfcuxu', form.current, 'DgrbULK3abKqPvWGP')
             .then((result) => {
-                alert("Message Sent , I will get back to you shortly", result.text);
+                alert("Message envoyé, nous vous répondrons sous peu.", result.text);
             }, (error) => {
-                alert("An error occurred, Please try again", error.text);
+                alert("Une erreur s'est produite, veuillez réessayer.", error.text);
             });
   };
 
