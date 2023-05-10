@@ -1,6 +1,5 @@
 import React from 'react'
 import domofinance from '../assets/domofinance.png'
-import rge from '../assets/rge.png'
 import qualibat from '../assets/qualibat.avif'
 import garantie from '../assets/garantie.png'
 import smabtp from '../assets/smabtp.png'
@@ -14,7 +13,6 @@ function Partenaires() {
       <Paper elevation={3} className='paper'>
         <a href="https://www.domofinance.com/" target='_blank' rel="noopener noreferrer"><img src={domofinance} alt="domofinance" /></a>
         <a href="https://www.qualibat.com/nos-missions/le-rge/" target="_blank" rel="noopener noreferrer"><img src={qualibat} alt="qualibat rge" /></a>
-        <a href="https://www.eco-artisan.net/" target="_blank" rel="noopener noreferrer"><img src={rge} alt="eco-artisan rge" /></a>
         <a href="https://www.service-public.fr/particuliers/vosdroits/F2034" target="_blank" rel="noopener noreferrer"><img src={garantie} alt="service public" /></a>
         <a href="https://www.groupe-sma.fr/" target="_blank" rel="noopener noreferrer"><img src={smabtp} alt="groupe sma" /></a>
       </Paper>
