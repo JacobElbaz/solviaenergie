@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Paper, Typography } from '@mui/material'
+import { Button, Container, Paper, Typography } from '@mui/material'
 import React from 'react'
 import { Carousel, CarouselItem } from 'react-bootstrap'
 import img1 from '../assets/carousel 1/1.jpg'
@@ -14,7 +14,6 @@ import img10 from '../assets/carousel 2/10.jpg'
 import img11 from '../assets/carousel 2/11.jpg'
 import img12 from '../assets/carousel 2/12.jpg'
 import img13 from '../assets/carousel 2/13.jpg'
-import { FormatQuote } from '@mui/icons-material'
 import { Helmet } from 'react-helmet-async'
 
 
@@ -74,23 +73,6 @@ function Realisations() {
           </CarouselItem>
         </Carousel>
       </div>
-      <Grid container justifyContent='space-evenly' my={10} textAlign='center'>
-        <Grid item width={300}>
-          <Typography variant='h6' color='primary' fontWeight='bold' >F.Damien, Projet Isolation Thermique Extérieur</Typography>
-          <Typography color='grey'>Une équipe très sérieuse, un suivi impeccable, des travaux effectué rapidement.</Typography>
-          <FormatQuote color='primary' />
-        </Grid>
-        <Grid item width={300}>
-          <Typography variant='h6' color='primary' fontWeight='bold' >B.Olivier, Projet Installation Pompe à Chaleur</Typography>
-          <Typography color='grey'>Je recommande, le bureau d'études Solvia Energie sont disponible tout le temps, des techniciens très compétent, j'avais une chaudière fioul que j'ai remplacé par une Pompe à chaleur, le projet c'est très bien passé. un excellent suivi.    </Typography>
-          <FormatQuote color='primary' />
-        </Grid>
-        <Grid item width={300}>
-          <Typography variant='h6' color='primary' fontWeight='bold' >T.Claire, Projet Calorifugeage</Typography>
-          <Typography color='grey'>Rapide et efficace, je recommande.</Typography>
-          <FormatQuote color='primary' />
-        </Grid>
-      </Grid>
       <Paper>
         <div className='description'>
           <Typography variant='h5' color="primary">Solvia Energie</Typography>
