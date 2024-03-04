@@ -15,7 +15,7 @@ function Acceuil() {
       </Helmet>
       <Grid container justifyContent='space-around' alignItems='center' className='head'>
         <Grid item>
-          <video src={solvia} controls loop autoPlay muted></video>
+          <video src={solvia} loop autoPlay muted playsInline></video>
         </Grid>
         <Grid item>
           <EligiForm />
