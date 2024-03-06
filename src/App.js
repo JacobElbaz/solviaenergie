@@ -12,9 +12,8 @@ import PACAirAir from './pages/PACAirAir'
 import PACAirEau from './pages/PACAirEau'
 import Realisations from './pages/Realisations'
 import Recrutement from './pages/Recrutement'
-import { createTheme, Paper, ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 import { deepOrange, orange } from '@mui/material/colors';
-import logo from './assets/logo.webp'
 import { HelmetProvider } from 'react-helmet-async';
 
 const theme = createTheme({
@@ -40,13 +39,6 @@ function App() {
     <HelmetProvider>
       <ThemeProvider theme={theme}>
         <div className="App">
-          <div className='logo'>
-            <a href="/">
-              <Paper elevation={0}>
-                <img src={logo} alt="logo solvia" />
-              </Paper>
-            </a>
-          </div>
           <Layout />
           <Routes>
             <Route path='/' element={<Acceuil />} />

@@ -2,7 +2,7 @@ import React from 'react'
 import ContactForm from './ContactForm'
 import ContactInfos from './ContactInfos'
 import './Footer.css'
-import { createTheme, ThemeProvider, Typography } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 
 const theme = createTheme({
@@ -35,7 +35,6 @@ function Footer() {
           </svg>
         </div>
         <div className='footer-container'>
-          <Typography variant='h1' fontSize={50} fontWeight='bold' >Vous avez des questions ?</Typography>
           <div className='footer'>
             <ContactInfos />
             <ContactForm />

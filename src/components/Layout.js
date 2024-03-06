@@ -4,17 +4,37 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import logo from '../assets/logo-navbar.png'
 
 function Layout() {
+  const [navbarClass, setNavbarClass] = React.useState('');
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      if (scrollTop === 0) {
+        setNavbarClass('');
+      } else {
+        setNavbarClass('solid-navbar');
+      }
+    };
+
+    // Ajoutez un gestionnaire d'événements pour détecter le défilement de la page
+    window.addEventListener('scroll', handleScroll);
+
+    // Nettoyez l'écouteur d'événements lors du démontage du composant
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      <Navbar key={'lg'} expand={'lg'} className="mb-3 mt-5">
+      <Navbar className={navbarClass} key={'lg'} expand={'lg'} fixed="top" variant="light">
           <Container fluid>
-            <Navbar.Brand href="/"></Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'lg'}`} />
+            <Navbar.Brand href="/"><img src={logo} alt="logo solvia"  height={35} className="d-inline-block align-top" /></Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'lg'}`} style={{ border: 'none' }} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${'lg'}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${'lg'}`}
@@ -47,11 +67,6 @@ function Layout() {
                   <Nav.Link href="/nos-realisations">Nos réalisations</Nav.Link>
                   <Nav.Link href="/aides">Aides</Nav.Link>
                   <Nav.Link href="/recrutement">Recrutement</Nav.Link>
-                </Nav>
-                <Nav className='d-flex'>
-                    <Nav.Link href=''><FacebookIcon/></Nav.Link>
-                    <Nav.Link href=''><InstagramIcon/></Nav.Link>
-                    <Nav.Link href=''><LinkedInIcon/></Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

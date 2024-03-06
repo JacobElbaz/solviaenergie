@@ -10,15 +10,17 @@
     border: 5px solid;
 }
 
-.logo {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 3;
+.navbar {
+    font-size: large;
+    transition: .2s;
 }
 
-.navbar {
+.solid-navbar {
     background-color: white;
+}
+
+.solid-navbar a:hover {
+    color: #ff5722;
 }
 
 .navbar a:hover {
@@ -44,12 +46,6 @@
 video {
     width: 100%;
     border-radius: 5px;
-}
-
-@media only screen and (min-width: 768px) {
-    video {
-        width: 900px;
-    }
 }
 
 .noValid {
@@ -113,6 +109,7 @@ video {
     .aide {
         margin: 0;
     }
+
     .aide img {
         width: 100%;
     }
@@ -124,4 +121,50 @@ h5 {
 
 .page-img {
     max-width: 90vw;
+}
+
+.hero {
+    min-height: 70vh;
+    background-image: url('./assets/hero4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    min-height: 70vh;
+    color: white;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.hero-text h1, .little-about h1 {
+    font-size: 3.5rem;
+}
+
+
+@media screen and (max-width: 750px) {
+    .hero-text h1, .little-about h1 {
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .hero-text h1, .little-about h1 {
+        font-size: 1.5rem;
+    }
+
+    .little-about h2 {
+        font-size: 1rem;
+    }
+}
+
+
+.little-about {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
