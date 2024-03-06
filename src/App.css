@@ -124,14 +124,14 @@ h5 {
 }
 
 .hero {
-    min-height: 70vh;
+    min-height: 70dvh;
     background-image: url('./assets/hero4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .hero-text {
-    min-height: 70vh;
+    min-height: 70dvh;
     color: white;
     text-align: center;
     justify-content: space-around;
@@ -161,7 +161,7 @@ h5 {
 
 
 .little-about {
-    min-height: 30vh;
+    min-height: 30dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
