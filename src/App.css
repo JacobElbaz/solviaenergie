@@ -168,3 +168,25 @@ h5 {
     align-items: center;
     text-align: center;
 }
+
+.counter-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    background-color: #FA7268;    
+    padding: 1rem;
+}
+
+.counter {
+    text-align: center;
+    color: white;
+    background-color: rgb(198,35,104);
+    border-radius: 5px;
+    padding: 1rem;
+    max-width: 22rem;
+}
+
+.counter h1 {
+    font-size: 6rem;
+}

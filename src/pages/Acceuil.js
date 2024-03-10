@@ -4,6 +4,7 @@ import Solutions from "../components/Solutions";
 import { Helmet } from "react-helmet-async";
 import Hero from "../components/Hero";
 import LittleAbout from "../components/LittleAbout";
+import CountUpBanner from "../components/CountUpBanner";
 
 function Acceuil() {
   return (
@@ -18,6 +19,7 @@ function Acceuil() {
       <Hero />
       <LittleAbout />
       <Solutions />
+      <CountUpBanner/>
       <Partenaires />
     </div>
   );
