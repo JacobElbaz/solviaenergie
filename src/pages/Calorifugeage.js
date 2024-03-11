@@ -10,9 +10,9 @@ function Calorifugeage() {
         <title>Solvia | Calorifugeage</title>
         <meta name="description" content="Le calorifugeage thermique désigne l'isolation des tuyaux ainsi que des canalisations d'eau et de chauffage." />
       </Helmet>
-      <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Calorifugeage</Typography>
+      <Typography variant='h1' color='primary' fontWeight='bold' textAlign='center' marginTop={'70px'} padding={'1rem'}>Calorifugeage</Typography>
       <div style={{textAlign: 'center'}}><video src={video} controls loop autoPlay muted></video></div>
-      <Typography variant='h4' component='h5' color='primary'>Qu'est-ce que le calorifugeage ?</Typography>
+      <Typography variant='h5' color='primary'>Qu'est-ce que le calorifugeage ?</Typography>
       <Typography>Le calorifugeage thermique désigne l'isolation des tuyaux ainsi que des canalisations d'eau et de chauffage. Il concerne également les citernes, les réservoirs ou encore les chaudières dans lesquels circulent des fluides caloporteurs ou de l'eau. Lorsque ces installations sont placées dans des pièces non chauffées, comme un garage, un sous-sol ou une cave, la déperdition de chaleur est élevée.</Typography>
       <Typography variant='h5' color='primary'>L'efficacité du calorifugeage</Typography>
       <Typography>Sans calorifugeage, les canalisations qui traversent la maison peuvent induire une perte calorifique importante. Ceci oblige à augmenter la température de l'installation, ce qui fait grimper la facture d'électricité ou de gaz. Une fois effectué, le calorifugeage permet de réduire considérablement les déperditions énergétiques et donc de faire des économies sur vos différents postes de dépenses.</Typography>

@@ -42,7 +42,7 @@ function Recrutement() {
         <title>Solvia | Recrutement</title>
         <meta name="description" content="Vous pouvez envoyez votre CV afin de postuler à l'un des postes vacants au sein de notre entreprise." />
       </Helmet>
-      <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Nous recrutons</Typography>
+      <Typography variant='h1' color='primary' fontWeight='bold' textAlign='center' marginTop={'70px'} paddingBlock={'1rem'} marginInline={0} paddingInline={0}>Nous recrutons</Typography>
       <Box
         sx={{
           display: 'flex',

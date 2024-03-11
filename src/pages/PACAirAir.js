@@ -10,9 +10,9 @@ function PACAirAir() {
         <title>Solvia | Pompe à chaleur air-air</title>
         <meta name="description" content="La pompe à chaleur air-air utilise les calories de l'air, une énergie gratuite, pour chauffer efficacement et à moindre coût votre logement." />
       </Helmet>
-      <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Pompe à chaleur Air/Air</Typography>
+      <Typography variant='h1' color='primary' fontWeight='bold' textAlign='center' marginTop={'70px'} padding={'1rem'}>Pompe à chaleur Air/Air</Typography>
       <img src={image} alt="pompe à chaleur" className='page-img'/>
-      <Typography variant='h4' component='h5' color='primary'>Tout savoir sur la pompe à chaleur Air-Air</Typography>
+      <Typography variant='h5' color='primary'>Tout savoir sur la pompe à chaleur Air-Air</Typography>
       <Typography fontStyle='italic'>La pompe à chaleur air-air utilise les calories de l'air, une énergie gratuite, pour chauffer efficacement et à moindre coût votre logement. Elle permet, en effet, de diviser par 3 votre facture de chauffage. Ces économies font de la pompe à chaleur air-air un système rentable en seulement quelques années.</Typography>
       <Typography variant='h5' color='primary'>Comment fonctionne une PAC air-air ?</Typography>
       <Typography>Le principe de fonctionnement de la pompe à chaleur air-air est simple. L'appareil capte les calories présentes dans l'air extérieur pour chauffer un logement. Pour fonctionner, la pompe à chaleur a besoin de deux unités. L'une, située à l'extérieur, récupère les calories de l'air et l'autre, à l'intérieur, la diffuse au sein du logement grâce à un ventilo-convecteur.</Typography>

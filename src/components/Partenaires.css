@@ -1,6 +1,6 @@
 .partenaires {
     text-align: center;
-    margin: 50px;
+    margin-block: 50px;
 }
 
 .partenaires img {
@@ -14,12 +14,16 @@
 }
 
 .paper {
-    min-height: 250px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     background-color: #ffffff !important;
-    background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
     margin-top: 50px;
+}
+
+@media screen and (max-width: 500px) {
+   .partenaires img {
+    height: 75px;
+   }
 }

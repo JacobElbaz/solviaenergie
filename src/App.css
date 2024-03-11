@@ -139,23 +139,27 @@ h5 {
     display: flex;
     flex-direction: column;
 }
-.hero-text h1, .little-about h1 {
-    font-size: 3.5rem;
+h1 {
+    font-size: 3.5rem !important;
+}
+
+h2 {
+    font-size: 2rem !important;
 }
 
 
 @media screen and (max-width: 750px) {
-    .hero-text h1, .little-about h1 {
-        font-size: 2.5rem;
+    h1 {
+        font-size: 2.5rem !important;
     }
 }
 @media screen and (max-width: 500px) {
-    .hero-text h1, .little-about h1 {
-        font-size: 1.5rem;
+    h1 {
+        font-size: 1.5rem !important;
     }
 
-    .little-about h2 {
-        font-size: 1rem;
+    h2 {
+        font-size: 1rem !important;
     }
 }
 

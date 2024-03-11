@@ -11,9 +11,9 @@ function PACAirEau() {
         <title>Solvia | Pompe à chaleur air-eau</title>
         <meta name="description" content="La pompe à chaleur air-air utilise les calories de l'air, une énergie gratuite, pour chauffer efficacement et à moindre coût votre logement." />
       </Helmet>
-      <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Pompe à chaleur Air/Eau</Typography>
+      <Typography variant='h1' color='primary' fontWeight='bold' textAlign='center' marginTop={'70px'} padding={'1rem'}>Pompe à chaleur Air/Eau</Typography>
       <div style={{textAlign: 'center'}}><video src={video} controls loop autoPlay muted></video></div>
-      <Typography variant='h4' component='h5' color='primary'>Tout savoir sur la pompe à chaleur Air-Eau</Typography>
+      <Typography variant='h5' color='primary'>Tout savoir sur la pompe à chaleur Air-Eau</Typography>
       <Typography fontStyle='italic'>La pompe à chaleur air-air utilise les calories de l'air, une énergie gratuite, pour chauffer efficacement et à moindre coût votre logement. Elle permet, en effet, de diviser par 3 votre facture de chauffage. Ces économies font de la pompe à chaleur air-air un système rentable en seulement quelques années.</Typography>
       <Typography variant='h5' color='primary'>Comment fonctionne une PAC air-eau ?</Typography>
       <Typography>A la différence de la pompe à chaleur air-air qui puise l'énergie dans l'air extérieur et la restitue sous forme d'air chaud, la pompe à chaleur air-eau, puise les calories dans l'air extérieur mais utilise l'eau pour transporter la chaleur. La plupart des modèles cessent de fonctionner dès que la température descend sous les -5°C, rendant indispensable un chauffage d'appoint dans certaines régions. Néanmoins, certains modèles, plus performants peuvent être opérationnels jusqu'à -25°C. Les performances de votre pompe à chaleur dépendent donc du climat de votre région. Cette solution n'est pas la plus adaptée lorsque votre région est soumise à des hivers rigoureux et des températures négatives. En effet, plus vous sollicitez l'électricité pour réchauffer l'eau de chauffage de votre installation, moins le rendement de votre pompe à chaleur air-eau est important et plus vous consommez d'énergie.</Typography>

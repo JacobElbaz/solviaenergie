@@ -29,7 +29,7 @@ function Solutions() {
 
   return (
     <div className="solutions-container" style={{position: 'relative', zIndex: 3}}>
-      <Typography variant="h2" color="white" fontWeight="bold">
+      <Typography variant="h1" color="white" padding={'1rem'}>
         Nos solutions
       </Typography>
       <motion.div

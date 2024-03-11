@@ -25,7 +25,7 @@ function Realisations() {
         <meta name="description" content="97% de nos clients sont satisfaits de nos services." />
       </Helmet>
       <div className='my-5'>
-        <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Nos Réalisations</Typography>
+        <Typography variant='h1' color='primary' fontWeight='bold' textAlign='center' marginTop={'70px'} padding={'1rem'}>Nos Réalisations</Typography>
         <Typography variant='h4' textAlign='center'><strong style={{ color: '#ff5722' }}>97%</strong> de nos clients sont satisfaits de nos services.</Typography>
       </div>
       <div className='carousel-container'>

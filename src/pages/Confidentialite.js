@@ -9,7 +9,7 @@ function Confidentialite() {
         <title>Solvia | Politiques de confidentialité</title>
         <meta name="description" content="Cette Politique de confidentialité décrit nos pratiques en matière de recueil, d'utilisation et de divulgation de vos informations par le biais de nos propriétés numériques, lorsque vous accédez aux Services depuis votre appareil." />
       </Helmet>
-      <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' className='my-5'>Politique de confidentialité</Typography>
+      <Typography variant='h1' color='primary' fontWeight='bold' textAlign='center' marginTop={'70px'} padding={'1rem'}>Politique de confidentialité</Typography>
       <Typography variant='h5' color='primary'>Introduction</Typography>
       <Typography>Nous (« nous ») nous soucions de la vie privée des utilisateurs (l’« utilisateur » ou « vous ») de notre site Internet et/ou de notre espace mobile (le « Site » et l’« Espace mobile », respectivement) et nous nous engageons à protéger les informations que les utilisateurs partagent avec nous lorsqu’ils utilisent notre Site et/ou notre Espace mobile (collectivement, les « Propriétés numériques »), et nous nous engageons pleinement à protéger et à utiliser vos informations conformément à la loi applicable.</Typography>
       <Typography>Cette Politique de confidentialité décrit nos pratiques en matière de recueil, d'utilisation et de divulgation de vos informations par le biais de nos propriétés numériques (les « Services »), lorsque vous accédez aux Services depuis votre appareil.</Typography>

@@ -29,10 +29,10 @@ function Partenaires() {
   };
   return (
     <div className="partenaires">
-      <Typography variant="h2" fontWeight="bold">
+      <Typography variant="h1">
         Ils nous font confiance
       </Typography>
-      <Paper elevation={3}>
+      <div>
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -73,7 +73,7 @@ function Partenaires() {
             <img src={smabtp} alt="groupe sma" />
           </motion.a>
         </motion.div>
-      </Paper>
+      </div>
     </div>
   );
 }

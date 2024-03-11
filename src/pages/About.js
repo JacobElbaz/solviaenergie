@@ -11,7 +11,7 @@ function About() {
         <title>Solvia | Qui sommes-nous ?</title>
         <meta name="description" content="Solvia Energie est une societé RGE spécialisée dans les solutions énergétiques. Notre mission: Fournir des services de grande qualité à nos clients." />
       </Helmet>
-      <Typography variant='h3' color='primary' fontWeight='bold' textAlign='center' sx={{ textAlign: 'center', margin: '70px auto' }}>A PROPOS DE NOUS</Typography>
+      <Typography variant='h1' color='primary' fontWeight='bold' textAlign='center' sx={{ textAlign: 'center', margin: '70px auto', padding: '1rem' }}>A PROPOS DE NOUS</Typography>
       <Container sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
         <Typography fontSize='20px' sx={{ maxWidth: '500px', textAlign: 'center' }}>Notre mission à <strong style={{ color: '#ff5722' }}>Solvia Energie</strong> est simple:<br /> Fournir des services de grande qualité à nos clients. Notre équipe fait tout pour répondre aux besoins spécifiques de chaque projet. Grâce à une communication transparente et à une qualité de service exceptionnelle, nous espérons que vous trouverez ce que vous cherchez en faisant appel à notre Service de rénovation de maison. Pour plus d'informations ou pour des demandes générales, contactez-nous dès aujourd'hui.</Typography>
         <img src={logo} alt="logo solvia" style={{ maxWidth: '100%' }} />
