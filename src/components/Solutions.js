@@ -1,9 +1,9 @@
 import { Button, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
 import "./Solutions.css";
-import calo from "../assets/calo.webp";
-import pac from "../assets/pac.webp";
-import iso from "../assets/iso.webp";
+import calo from "../assets/residence-individuel.jpg";
+import pac from "../assets/solvia-hero-2.png";
+import iso from "../assets/tertiaire.png";
 import { motion } from "framer-motion";
 
 function Solutions() {
@@ -28,8 +28,11 @@ function Solutions() {
   };
 
   return (
-    <div className="solutions-container" style={{position: 'relative', zIndex: 3}}>
-      <Typography variant="h1" color="white" padding={'1rem'}>
+    <div
+      className="solutions-container"
+      style={{ position: "relative", zIndex: 3 }}
+    >
+      <Typography variant="h1" color="white" padding={"1rem"}>
         Nos solutions
       </Typography>
       <motion.div
@@ -44,11 +47,15 @@ function Solutions() {
             <div
               style={{ height: "150px", width: "inherit", overflow: "hidden" }}
             >
-              <img src={pac} alt="pompe à chaleur" />
+              <img
+                src={pac}
+                style={{ objectFit: "cover" }}
+                alt="pompe à chaleur"
+              />
             </div>
             <CardContent className="card-content">
               <Typography variant="h4">
-                <a href="/pac-air-eau">Pompe à chaleur</a>
+                <a href="/pac-air-eau">Residentiel <br /> Collectif</a>
               </Typography>
               <Typography>
                 La pompe à chaleur peut être le système de chauffage idéal pour
@@ -69,11 +76,17 @@ function Solutions() {
             <div
               style={{ height: "150px", width: "inherit", overflow: "hidden" }}
             >
-              <img src={calo} alt="calorifugeage" />
+              <img
+                src={calo}
+                style={{ objectFit: "cover" }}
+                alt="calorifugeage"
+              />
             </div>
             <CardContent className="card-content">
               <Typography variant="h4">
-                <a href="/calorifugeage">Calorifugeage</a>
+                <a href="/calorifugeage">
+                  Maison <br /> Individuelle
+                </a>
               </Typography>
               <Typography>
                 Le calorifugeage désigne l'isolation des canalisations d'eau et
@@ -97,15 +110,14 @@ function Solutions() {
             </div>
             <CardContent className="card-content">
               <Typography variant="h4">
-                <a href="/isolation-exterieur">Isolation exterieure</a>
+                <a href="/isolation-exterieur">
+                  Tertiaire <br /> Industrie
+                </a>{" "}
               </Typography>
               <Typography>
-                L'isolation des murs par l'extérieur obéit au principe suivant :
-                la pose d'une enveloppe isolante tout autour du bâti de la
-                maison. Une solution qui permet, notamment, d'éliminer les ponts
-                thermiques. Ce sont des zones de faiblesse de l'isolation
-                responsables d'une forte déperdition d'énergie dans votre
-                logement.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+                blanditiis magnam doloribus corrupti ab impedit porro veniam
+                reiciendis, esse sequi.
               </Typography>
               <Button href="/isolation-exterieur">En savoir plus</Button>
               <Button variant="outlined" href="/#contact">

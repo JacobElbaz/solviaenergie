@@ -15,10 +15,13 @@ import Recrutement from './pages/Recrutement'
 import { createTheme, ThemeProvider } from '@mui/material';
 import { deepOrange, orange } from '@mui/material/colors';
 import { HelmetProvider } from 'react-helmet-async';
+import Equipe from './pages/Equipe';
 
 const theme = createTheme({
   palette: {
-    primary: deepOrange,
+    primary:{
+      main: '#fa7268',
+    }, 
     secondary: orange
   },
   typography: {
@@ -52,6 +55,7 @@ function App() {
             <Route path='/nos-realisations' element={<Realisations />} />
             <Route path='/recrutement' element={<Recrutement />} />
             <Route path='/politiques' element={<Confidentialite />} />
+            <Route path='/notre-equipe' element={<Equipe />} />
           </Routes>
           <Footer />
         </div>

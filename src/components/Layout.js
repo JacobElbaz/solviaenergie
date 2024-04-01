@@ -65,8 +65,7 @@ function Layout() {
                     </NavDropdown.Item>
                   </NavDropdown>
                   <Nav.Link href="/nos-realisations">Nos réalisations</Nav.Link>
-                  <Nav.Link href="/aides">Aides</Nav.Link>
-                  <Nav.Link href="/recrutement">Recrutement</Nav.Link>
+                  <Nav.Link href="/notre-equipe">Notre equipe</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

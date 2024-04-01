@@ -14,9 +14,10 @@ function ContactInfos() {
                     NOUS CONTACTER
                 </Typography>
                 <Grid container alignItems='center' >
+                    
                     <CallOutlined sx={{ fontSize: 50 }} />
                     <div>
-                        Téléphone <Typography display='inline' color='primary' fontWeight='bold'> 09 70 684 343 </Typography><br />
+                        Téléphone <Typography display='inline' color='primary' fontWeight='bold'> 09 70 68 43 43 </Typography><br />
                         Lundi au Jeudi 08h-20h <br />
                         Vendredi 08h-14h
                     </div>

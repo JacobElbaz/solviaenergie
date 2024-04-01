@@ -44,8 +44,8 @@ function Hero() {
             className="hero-text"
             viewport={{ once: true }}
           >
-            <motion.h1 variants={item}>Votre expert en transition énergétique</motion.h1>
-            <motion.div variants={item}><Button href={'/#contact'} variant={"contained"}>Contactez nous</Button></motion.div>
+            <motion.h1 style={{marginInline: '1rem'}} variants={item}>Expertise et engagement <br /> pour une transition energetique durable</motion.h1>
+            <motion.div variants={item}><Button href={'/#contact'} style={{color: 'white'}} variant={"contained"}>Contactez nous</Button></motion.div>
             
           </motion.div>
         </motion.div>
