@@ -15,11 +15,11 @@ function Equipe() {
           marginTop={"70px"}
           padding={"1rem"}
         >
-          Notre equipe
+          Notre équipe
         </Typography>
         <Typography variant="h6" textAlign="center" marginInline={"1rem"}>
-          Notre equipe vous accompagne avec le sourire tout au long de votre
-          projet de renovation energetique
+          Notre équipe vous accompagne avec le sourire tout au long de votre
+          projet de rénovation énergétique
         </Typography>
       </div>
       <div className="cartes-container">

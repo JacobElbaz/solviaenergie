@@ -55,7 +55,7 @@ function Solutions() {
             </div>
             <CardContent className="card-content">
               <Typography variant="h4">
-                <a href="/pac-air-eau">Residentiel <br /> Collectif</a>
+                <a href="/pac-air-eau">Résidentiel <br /> Collectif</a>
               </Typography>
               <Typography>
                 La pompe à chaleur peut être le système de chauffage idéal pour

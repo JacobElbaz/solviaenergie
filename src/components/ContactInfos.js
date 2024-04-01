@@ -8,7 +8,7 @@ function ContactInfos() {
         <Container maxWidth='xs'>
             <Stack spacing={3}>
                 <div variant='h6'>
-                    <Typography display='inline' color='primary' fontWeight='bold'>Solvia Energie</Typography>, a votre service
+                    <Typography display='inline' color='primary' fontWeight='bold'>Solvia Energie</Typography>, à votre service
                 </div>
                 <Typography variant='h4'>
                     NOUS CONTACTER

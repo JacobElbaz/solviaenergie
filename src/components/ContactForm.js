@@ -79,7 +79,7 @@ export default function ContactForm() {
                   required
                   fullWidth
                   id="firstName"
-                  label="Prenom"
+                  label="Prénom"
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -107,7 +107,7 @@ export default function ContactForm() {
                   required
                   fullWidth
                   name="tel"
-                  label="Telephone"
+                  label="Téléphone"
                   type="tel"
                   id="tel"
                   autoComplete="telephone"
