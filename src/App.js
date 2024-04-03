@@ -13,16 +13,19 @@ import PACAirEau from './pages/PACAirEau'
 import Realisations from './pages/Realisations'
 import Recrutement from './pages/Recrutement'
 import { createTheme, ThemeProvider } from '@mui/material';
-import { deepOrange, orange } from '@mui/material/colors';
 import { HelmetProvider } from 'react-helmet-async';
 import Equipe from './pages/Equipe';
 
 const theme = createTheme({
   palette: {
     primary:{
-      main: '#fa7268',
+      main: '#FF8D00',
+      contrastText: '#ffff',
     }, 
-    secondary: orange
+    secondary: {
+      main: '#1E5DFF',
+      contrastText: '#ffff',
+    }
   },
   typography: {
     fontFamily: [

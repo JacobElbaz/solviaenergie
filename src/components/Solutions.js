@@ -12,7 +12,7 @@ function Solutions() {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.1,
+        staggerChildren: 0.2,
       },
     },
     hidden: {
@@ -23,14 +23,14 @@ function Solutions() {
     },
   };
   const item = {
-    visible: { opacity: 1, y: 0 },
+    visible: { opacity: 1, y: 0, transition: { duration: .5 } },
     hidden: { opacity: 0, y: 100 },
   };
 
   return (
     <div
       className="solutions-container"
-      style={{ position: "relative", zIndex: 3 }}
+      style={{ position: "relative", zIndex: 3, minHeight: '95vh' }}
     >
       <Typography variant="h1" color="white" padding={"1rem"}>
         Nos solutions
@@ -39,7 +39,6 @@ function Solutions() {
         initial="hidden"
         whileInView="visible"
         variants={list}
-        viewport={{ once: true }}
         className="solutions"
       >
         <motion.div variants={item}>

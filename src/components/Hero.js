@@ -8,7 +8,7 @@ function Hero() {
     target: ref,
     offset: ["1 0.3", "1.5 1"],
   });
-  const yTranslate = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  //const yTranslate = useTransform(scrollYProgress, [0, 1], [200, 0]);
   const list = {
     visible: {
       opacity: 1,
@@ -31,10 +31,12 @@ function Hero() {
   };
 
   return (
-    <motion.div style={{ translateY: yTranslate }} className="hero">
+    <motion.div
+      //style={{ translateY: yTranslate }}
+      className="hero"
+    >
       <div style={{ backgroundColor: "rgba(0, 0, 0, 0.329)" }}>
-        <motion.div
-        >
+        <motion.div>
           <motion.div
             ref={ref}
             initial="hidden"
@@ -44,9 +46,19 @@ function Hero() {
             className="hero-text"
             viewport={{ once: true }}
           >
-            <motion.h1 style={{marginInline: '1rem'}} variants={item}>Expertise et engagement <br /> pour une transition énergétique durable</motion.h1>
-            <motion.div variants={item}><Button href={'/#contact'} style={{color: 'white'}} variant={"contained"}>Contactez nous</Button></motion.div>
-            
+            <motion.h1 style={{ marginInline: "1rem" }} variants={item}>
+              Expertise et engagement <br /> pour une transition énergétique
+              durable
+            </motion.h1>
+            <motion.div variants={item}>
+              <Button
+                href={"/#contact"}
+                style={{ color: "white" }}
+                variant={"contained"}
+              >
+                Contactez nous
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

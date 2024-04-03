@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import logo from '../assets/logo-navbar.png'
+import logo from '../assets/logo-solvia-nobg.png'
 
 function Layout() {
   const [navbarClass, setNavbarClass] = React.useState('');
@@ -33,7 +33,7 @@ function Layout() {
     <div>
       <Navbar className={navbarClass} key={'lg'} expand={'lg'} fixed="top" variant="light">
           <Container fluid>
-            <Navbar.Brand href="/"><img src={logo} alt="logo solvia"  height={35} className="d-inline-block align-top" /></Navbar.Brand>
+            <Navbar.Brand href="/"><img src={logo} alt="logo solvia" height={35} className="d-inline-block align-top" /></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'lg'}`} style={{ border: 'none' }} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${'lg'}`}

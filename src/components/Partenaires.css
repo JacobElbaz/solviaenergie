@@ -1,4 +1,5 @@
 .partenaires {
+    overflow: hidden;
     text-align: center;
     margin-block: 50px;
 }

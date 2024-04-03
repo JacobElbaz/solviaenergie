@@ -1,3 +1,9 @@
+:root {
+    --couleur-principale: #1E5DFF;
+    --couleur-secondaire: #FF8D00;
+    --couleur-vert: #80FF00;
+}
+
 .radio-sel {
     flex-grow: 1;
     flex-direction: row-reverse;
@@ -20,11 +26,11 @@
 }
 
 .solid-navbar a:hover {
-    color: #ff5722;
+    color: var(--couleur-secondaire);
 }
 
 .navbar a:hover {
-    color: #ff5722;
+    color: var(--couleur-secondaire);
 }
 
 .navbar .dropdown-menu {
@@ -87,7 +93,7 @@ video {
 
 .carte-de-visite img {
     object-fit: cover;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     width: 8rem;
     height: 8rem;
 }
@@ -137,7 +143,7 @@ h5 {
 }
 
 .hero {
-    min-height: 70svh;
+    min-height: 70vh;
     background-image: url('./assets/solvia-hero-2.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -145,7 +151,7 @@ h5 {
 }
 
 .hero-text {
-    min-height: 70svh;
+    min-height: 70vh;
     color: white;
     text-align: center;
     justify-content: space-around;
@@ -153,6 +159,7 @@ h5 {
     display: flex;
     flex-direction: column;
 }
+
 h1 {
     font-size: 3.5rem !important;
 }
@@ -167,6 +174,7 @@ h2 {
         font-size: 2.5rem !important;
     }
 }
+
 @media screen and (max-width: 500px) {
     h1 {
         font-size: 1.5rem !important;
@@ -192,7 +200,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1rem;
-    background-color: #FA7268;    
+    background-color: var(--couleur-secondaire);
     padding: 4rem;
 }
 

@@ -1,6 +1,11 @@
+:root {
+    --couleur-principale: #1E5DFF;
+    --couleur-secondaire: #FF8D00;
+    --couleur-vert: #80FF00;
+}
+
 .footer-container {
-    background: rgb(198,35,104);
-    background: linear-gradient(0deg, rgba(198,35,104,1) 0%, rgba(250,114,104,1) 100%);
+    background: linear-gradient(0deg, var(--couleur-secondaire) 0%, var(--couleur-secondaire) 100%);
 }
 
 .footer-container h1{
@@ -8,6 +13,7 @@
 }
 
 .footer {
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -33,5 +39,5 @@
 }
 
 .custom-shape-divider-bottom-1671971675 .shape-fill {
-    fill: #FA7268;
+    fill: var(--couleur-secondaire);
 }

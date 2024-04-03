@@ -4,6 +4,7 @@ import ContactInfos from './ContactInfos'
 import './Footer.css'
 import { createTheme, ThemeProvider } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
+import { motion} from 'framer-motion';
 
 const theme = createTheme({
   palette: {
@@ -36,8 +37,12 @@ function Footer() {
         </div>
         <div className='footer-container'>
           <div className='footer'>
+          <motion.div initial={{opacity: 0, x: -100}} whileInView={{opacity: 1, x:0}} transition={{duration: .5}}>
             <ContactInfos />
-            <ContactForm />
+          </motion.div>
+            <motion.div initial={{opacity: 0, x: 100}} whileInView={{opacity: 1, x:0}} transition={{duration: .5}}>
+              <ContactForm />
+            </motion.div>
           </div>
         </div>
       </div>
