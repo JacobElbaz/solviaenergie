@@ -1,7 +1,10 @@
 :root {
     --couleur-principale: #1E5DFF;
     --couleur-secondaire: #FF8D00;
-    --couleur-vert: #80FF00;
+    --couleur-vert: #86B747;
+    --bleu: #275D9D;
+    --vert: #D2E4BB;
+    --orange: #E67C33;
 }
 
 .radio-sel {
@@ -185,6 +188,22 @@ h2 {
     }
 }
 
+.with {
+    color: var(--bleu);
+    font-weight: bold;
+}
+
+.with::before {
+    position: absolute;
+    z-index: -1;
+    bottom: 150px;
+    left: 10%;
+    content: 'helo';
+    color: transparent;
+    width: 80%;
+    height: 10%;
+    background-color: var(--vert);
+}
 
 .little-about {
     min-height: 30svh;
@@ -195,12 +214,22 @@ h2 {
     text-align: center;
 }
 
+.little-about::after {
+    content: 'hello';
+    color: transparent;
+    background-color: var(--orange);
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+}
+
 .counter-banner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1rem;
-    background-color: var(--couleur-secondaire);
+    background-color: var(--orange);
     padding: 4rem;
 }
 
@@ -216,4 +245,36 @@ h2 {
 
 .counter h1 {
     font-size: 6rem;
+}
+
+.residentiel-hero {
+    background-image: url('../src/assets/solvia-hero-2.png');
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.residentiel-container {
+    margin-top: 75px;
+}
+
+.residentiel-container h1 {
+    margin-top: 5rem;
+    color: var(--bleu);
+    font-weight: bold;
+}
+
+.residentiel-container h2 {
+    font-weight: bold;
+    color: var(--bleu);
+}
+
+.residentiel-container div {
+    padding: 1rem;
+    margin-block: 1rem;
+    border-radius: 3px;
 }

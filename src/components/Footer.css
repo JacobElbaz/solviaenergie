@@ -2,10 +2,13 @@
     --couleur-principale: #1E5DFF;
     --couleur-secondaire: #FF8D00;
     --couleur-vert: #80FF00;
+    --bleu: #275D9D;
+    --vert: #D2E4BB;
+    --orange: #E67C33;
 }
 
 .footer-container {
-    background: linear-gradient(0deg, var(--couleur-secondaire) 0%, var(--couleur-secondaire) 100%);
+    background: linear-gradient(0deg, var(--vert) 0%, var(--vert) 100%);
 }
 
 .footer-container h1{
@@ -39,5 +42,5 @@
 }
 
 .custom-shape-divider-bottom-1671971675 .shape-fill {
-    fill: var(--couleur-secondaire);
+    fill: var(--vert);
 }

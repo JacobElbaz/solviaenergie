@@ -55,6 +55,7 @@ function Hero() {
                 href={"/#contact"}
                 style={{ color: "white" }}
                 variant={"contained"}
+                color="warning"
               >
                 Contactez nous
               </Button>

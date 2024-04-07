@@ -54,7 +54,7 @@ function Solutions() {
             </div>
             <CardContent className="card-content">
               <Typography variant="h4">
-                <a href="/pac-air-eau">Résidentiel <br /> Collectif</a>
+                <a href="/residentiel-collectif">Résidentiel <br /> Collectif</a>
               </Typography>
               <Typography>
                 La pompe à chaleur peut être le système de chauffage idéal pour
@@ -63,8 +63,8 @@ function Solutions() {
                 confort thermique. De ce fait, l'énergie électrique consommée
                 est moindre par rapport à celle produite.
               </Typography>
-              <Button href="/pac-air-eau">En savoir plus</Button>
-              <Button variant="outlined" href="/#contact">
+              <Button href="/residentiel-collectif">En savoir plus</Button>
+              <Button variant="outlined" href="/#contact" color="bleu">
                 Contactez-nous
               </Button>
             </CardContent>
@@ -94,7 +94,7 @@ function Solutions() {
                 non chauffée.
               </Typography>
               <Button href="/calorifugeage">En savoir plus</Button>
-              <Button variant="outlined" href="/#contact">
+              <Button variant="outlined" href="/#contact" color="bleu">
                 Contactez-nous
               </Button>
             </CardContent>
@@ -109,7 +109,7 @@ function Solutions() {
             </div>
             <CardContent className="card-content">
               <Typography variant="h4">
-                <a href="/isolation-exterieur">
+                <a href="/calorifugeage">
                   Tertiaire <br /> Industrie
                 </a>{" "}
               </Typography>
@@ -118,8 +118,8 @@ function Solutions() {
                 blanditiis magnam doloribus corrupti ab impedit porro veniam
                 reiciendis, esse sequi.
               </Typography>
-              <Button href="/isolation-exterieur">En savoir plus</Button>
-              <Button variant="outlined" href="/#contact">
+              <Button href="/calorifugeage">En savoir plus</Button>
+              <Button variant="outlined" href="/#contact" color="bleu">
                 Contactez-nous
               </Button>
             </CardContent>

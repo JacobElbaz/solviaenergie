@@ -15,16 +15,24 @@ import Recrutement from './pages/Recrutement'
 import { createTheme, ThemeProvider } from '@mui/material';
 import { HelmetProvider } from 'react-helmet-async';
 import Equipe from './pages/Equipe';
+import ResidentielCollectif from './pages/ResidentielCollectif';
 
 const theme = createTheme({
   palette: {
     primary:{
-      main: '#FF8D00',
+      main: '#275D9D',
       contrastText: '#ffff',
     }, 
     secondary: {
       main: '#1E5DFF',
       contrastText: '#ffff',
+    },
+    warning: {
+      main: '#86B747',
+      contrastText: 'ffff',
+    },
+    bleu: {
+      main: '#275D9D',
     }
   },
   typography: {
@@ -59,6 +67,7 @@ function App() {
             <Route path='/recrutement' element={<Recrutement />} />
             <Route path='/politiques' element={<Confidentialite />} />
             <Route path='/notre-equipe' element={<Equipe />} />
+            <Route path='/residentiel-collectif' element={<ResidentielCollectif />} />
           </Routes>
           <Footer />
         </div>
