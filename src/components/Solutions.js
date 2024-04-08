@@ -83,7 +83,7 @@ function Solutions() {
             </div>
             <CardContent className="card-content">
               <Typography variant="h4">
-                <a href="/calorifugeage">
+                <a href="/maison-individuelle">
                   Maison <br /> Individuelle
                 </a>
               </Typography>
@@ -93,7 +93,7 @@ function Solutions() {
                 notamment dans le cas d'une canalisation qui passe dans une zone
                 non chauffée.
               </Typography>
-              <Button href="/calorifugeage">En savoir plus</Button>
+              <Button href="/maison-individuelle">En savoir plus</Button>
               <Button variant="outlined" href="/#contact" color="bleu">
                 Contactez-nous
               </Button>

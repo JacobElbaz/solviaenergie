@@ -16,6 +16,7 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import { HelmetProvider } from 'react-helmet-async';
 import Equipe from './pages/Equipe';
 import ResidentielCollectif from './pages/ResidentielCollectif';
+import MaisonIndividuelle from './pages/MaisonIndividuelle';
 
 const theme = createTheme({
   palette: {
@@ -68,6 +69,7 @@ function App() {
             <Route path='/politiques' element={<Confidentialite />} />
             <Route path='/notre-equipe' element={<Equipe />} />
             <Route path='/residentiel-collectif' element={<ResidentielCollectif />} />
+            <Route path='/maison-individuelle' element={<MaisonIndividuelle />} />
           </Routes>
           <Footer />
         </div>

@@ -247,6 +247,25 @@ h2 {
     font-size: 6rem;
 }
 
+.maison-hero {
+    background-image: url('../src/assets/residence-individuel.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    color: white;
+}
+
+.maison-hero h1 {
+    background-color: rgba(0, 0, 0, 0.226);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
 .residentiel-hero {
     background-image: url('../src/assets/solvia-hero-2.png');
     background-position: center;
