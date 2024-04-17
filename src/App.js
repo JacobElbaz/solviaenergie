@@ -19,6 +19,22 @@ import ResidentielCollectif from './pages/ResidentielCollectif';
 import MaisonIndividuelle from './pages/MaisonIndividuelle';
 
 const theme = createTheme({
+  components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#fff", // Fond blanc
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#fff", // Fond blanc
+        },
+      },
+    },
+  },
   palette: {
     primary:{
       main: '#275D9D',

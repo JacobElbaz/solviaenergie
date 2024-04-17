@@ -6,27 +6,8 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 import { motion} from 'framer-motion';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: deepOrange[50]
-    }
-  },
-  typography: {
-    fontFamily: [
-      'Questrial',
-       '-apple-system',
-        'BlinkMacSystemFont',
-         'Segoe UI',
-          'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    'sans-serif',].join(','),
-    }
-})
-
 function Footer() {
   return (
-    <ThemeProvider theme={theme}>
       <div>
         <div className="custom-shape-divider-bottom-1671971675" id='contact'>
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -46,7 +27,6 @@ function Footer() {
           </div>
         </div>
       </div>
-    </ThemeProvider>
   )
 }
 

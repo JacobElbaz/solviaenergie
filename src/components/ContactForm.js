@@ -6,26 +6,10 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { createTheme, FormControl, InputLabel, MenuItem, Select, ThemeProvider } from '@mui/material';
-import { deepOrange } from '@mui/material/colors';
+import { deepOrange, deepPurple } from '@mui/material/colors';
 import emailjs from '@emailjs/browser';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: deepOrange[50]
-    }
-  },
-  typography: {
-    fontFamily: [
-      'Questrial',
-       '-apple-system',
-        'BlinkMacSystemFont',
-         'Segoe UI',
-          'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    'sans-serif',].join(','),
-    }
-})
+
 
 export default function ContactForm() {
 
@@ -60,7 +44,6 @@ export default function ContactForm() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
       <Container maxWidth="xs">
         <CssBaseline />
         <Box
@@ -80,6 +63,7 @@ export default function ContactForm() {
                   fullWidth
                   id="firstName"
                   label="Prénom"
+                  variant='filled'
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -90,6 +74,7 @@ export default function ContactForm() {
                   label="Nom"
                   name="lastName"
                   autoComplete="family-name"
+                  variant='filled'
                 />
               </Grid>
               <Grid item xs={12}>
@@ -100,6 +85,7 @@ export default function ContactForm() {
                   label="E-mail"
                   name="email"
                   autoComplete="email"
+                  variant='filled'
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -111,10 +97,11 @@ export default function ContactForm() {
                   type="tel"
                   id="tel"
                   autoComplete="telephone"
+                  variant='filled'
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <FormControl fullWidth>
+                <FormControl fullWidth variant='filled'>
                   <InputLabel id="demo-simple-select-label">Solution</InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
@@ -136,6 +123,7 @@ export default function ContactForm() {
                   label='Message'
                   name='message'
                   rows={3}
+                  variant='filled'
                 />
               </Grid>
             </Grid>
@@ -150,6 +138,5 @@ export default function ContactForm() {
           </Box>
         </Box>
       </Container>
-    </ThemeProvider>
   );
 }

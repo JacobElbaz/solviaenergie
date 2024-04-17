@@ -31,7 +31,7 @@ function Layout() {
 
   return (
     <div>
-      <Navbar className={navbarClass} key={'lg'} expand={'lg'} fixed="top" variant="light">
+      <Navbar className={'solid-navbar'} key={'lg'} expand={'lg'} fixed="top" variant="light">
           <Container fluid>
             <Navbar.Brand href="/"><img src={logo} alt="logo solvia" height={35} className="d-inline-block align-top" /></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'lg'}`} style={{ border: 'none' }} />
